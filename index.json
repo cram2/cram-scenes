@@ -17,9 +17,29 @@
    "environment": "apartment"
   },
   {
+   "name": "Unitree_storage_warehouse",
+   "robot": "unitreeg1",
+   "environment": "storage_warehouse"
+  },
+  {
    "name": "Unitree_warehouse",
    "robot": "unitreeg1",
    "environment": "no_roof_small_warehouse"
+  },
+  {
+   "name": "Unitree_wind_farm_service",
+   "robot": "unitreeg1",
+   "environment": "wind_farm"
+  },
+  {
+   "name": "Unitree_wind_turbine_assembly",
+   "robot": "unitreeg1",
+   "environment": "wind_turbine_assembly+no_roof_small_warehouse"
+  },
+  {
+   "name": "Unitree_wind_turbine_hall",
+   "robot": "unitreeg1",
+   "environment": "wind_turbine_hall"
   },
   {
    "name": "aicor_cell",

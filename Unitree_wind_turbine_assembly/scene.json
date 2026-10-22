@@ -1,0 +1,1451 @@
+{
+ "name": "Unitree_wind_turbine_assembly",
+ "fps": 50,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "offis_unitree_g1",
+   "urdf": "offis_unitree_g1.urdf",
+   "prefix": "offis_unitree_g1",
+   "robot": true,
+   "links": 56,
+   "movableJoints": [
+    "floating_base_joint",
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "left_hand_thumb_0_joint",
+    "left_hand_thumb_1_joint",
+    "left_hand_thumb_2_joint",
+    "left_hand_middle_0_joint",
+    "left_hand_middle_1_joint",
+    "left_hand_index_0_joint",
+    "left_hand_index_1_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint",
+    "right_hand_thumb_0_joint",
+    "right_hand_thumb_1_joint",
+    "right_hand_thumb_2_joint",
+    "right_hand_middle_0_joint",
+    "right_hand_middle_1_joint",
+    "right_hand_index_0_joint",
+    "right_hand_index_1_joint"
+   ]
+  },
+  {
+   "name": "wind_turbine_assembly",
+   "urdf": "wind_turbine_assembly.urdf",
+   "prefix": "wind_turbine_assembly",
+   "robot": false,
+   "links": 9,
+   "movableJoints": []
+  },
+  {
+   "name": "no_roof_small_warehouse",
+   "urdf": "no_roof_small_warehouse.urdf",
+   "prefix": "",
+   "robot": false,
+   "links": 26,
+   "movableJoints": []
+  }
+ ],
+ "robot": {
+  "name": "unitreeg1",
+  "prefix": "offis_unitree_g1",
+  "baseBody": "pelvis",
+  "parts": {
+   "UnitreeG1LeftArm": [
+    "left_elbow_link",
+    "left_shoulder_pitch_link",
+    "left_shoulder_roll_link",
+    "left_shoulder_yaw_link",
+    "left_wrist_pitch_link",
+    "left_wrist_roll_link",
+    "left_wrist_yaw_link"
+   ],
+   "UnitreeG1LeftHand": [
+    "left_hand_index_0_link",
+    "left_hand_index_1_link",
+    "left_hand_middle_0_link",
+    "left_hand_middle_1_link",
+    "left_hand_palm_link",
+    "left_hand_thumb_0_link",
+    "left_hand_thumb_1_link",
+    "left_hand_thumb_2_link",
+    "left_hand_tool_frame"
+   ],
+   "UnitreeG1RightArm": [
+    "right_elbow_link",
+    "right_shoulder_pitch_link",
+    "right_shoulder_roll_link",
+    "right_shoulder_yaw_link",
+    "right_wrist_pitch_link",
+    "right_wrist_roll_link",
+    "right_wrist_yaw_link"
+   ],
+   "UnitreeG1RightHand": [
+    "right_hand_index_0_link",
+    "right_hand_index_1_link",
+    "right_hand_middle_0_link",
+    "right_hand_middle_1_link",
+    "right_hand_palm_link",
+    "right_hand_thumb_0_link",
+    "right_hand_thumb_1_link",
+    "right_hand_thumb_2_link",
+    "right_hand_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "bolt_crate",
+   "key": "bolt_crate",
+   "box": [
+    0.08,
+    0.08,
+    0.14
+   ],
+   "spawn": [
+    2.75,
+    9.3,
+    0.792,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#d9731a",
+   "height": 0.14
+  },
+  {
+   "id": "pitch_motor",
+   "key": "pitch_motor",
+   "box": [
+    0.08,
+    0.08,
+    0.14
+   ],
+   "spawn": [
+    2.75,
+    9.12,
+    0.792,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#008c99",
+   "height": 0.14
+  },
+  {
+   "id": "sensor_unit",
+   "key": "sensor_unit",
+   "box": [
+    0.08,
+    0.08,
+    0.14
+   ],
+   "spawn": [
+    2.75,
+    8.95,
+    0.792,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#8c949e",
+   "height": 0.14
+  }
+ ],
+ "segments": [
+  {
+   "step": "prepare",
+   "action": "ParkArmsAction,NavigateAction",
+   "arm": null,
+   "start": 0,
+   "end": 168
+  },
+  {
+   "step": "pickup_bolt_crate",
+   "action": "PickUpAction",
+   "arm": null,
+   "start": 168,
+   "end": 552,
+   "picks": "bolt_crate",
+   "attach": 168,
+   "detach": 359,
+   "place": [
+    2.60009,
+    7.7005,
+    0.79839
+   ]
+  },
+  {
+   "step": "pickup_pitch_motor",
+   "action": "PickUpAction",
+   "arm": null,
+   "start": 552,
+   "end": 1132,
+   "picks": "pitch_motor",
+   "attach": 745,
+   "detach": 939,
+   "place": [
+    2.60008,
+    7.87998,
+    0.79778
+   ]
+  },
+  {
+   "step": "pickup_sensor_unit",
+   "action": "PickUpAction",
+   "arm": null,
+   "start": 1132,
+   "end": 1705,
+   "picks": "sensor_unit",
+   "attach": 1326,
+   "detach": 1519,
+   "place": [
+    2.60016,
+    8.06065,
+    0.7991
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PickUpAction",
+   "arm": null,
+   "target": "bolt_crate"
+  },
+  {
+   "action": "ReachAction",
+   "arm": null,
+   "target": "bolt_crate"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PlaceAction",
+   "arm": null,
+   "target": "bolt_crate"
+  },
+  {
+   "action": "ReachAction",
+   "arm": null,
+   "target": "bolt_crate"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PickUpAction",
+   "arm": null,
+   "target": "pitch_motor"
+  },
+  {
+   "action": "ReachAction",
+   "arm": null,
+   "target": "pitch_motor"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PlaceAction",
+   "arm": null,
+   "target": "pitch_motor"
+  },
+  {
+   "action": "ReachAction",
+   "arm": null,
+   "target": "pitch_motor"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PickUpAction",
+   "arm": null,
+   "target": "sensor_unit"
+  },
+  {
+   "action": "ReachAction",
+   "arm": null,
+   "target": "sensor_unit"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "NavigateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PlaceAction",
+   "arm": null,
+   "target": "sensor_unit"
+  },
+  {
+   "action": "ReachAction",
+   "arm": null,
+   "target": "sensor_unit"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "SequentialNode",
+   "label": "SequentialNode",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "PickUpAction",
+     "status": "CREATED",
+     "target": "bolt_crate",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "SequentialNode",
+       "label": "SequentialNode",
+       "status": "CREATED",
+       "children": [
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "ActionNode",
+         "label": "ReachAction",
+         "status": "CREATED",
+         "target": "bolt_crate",
+         "children": [
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "SequentialNode",
+           "label": "SequentialNode",
+           "status": "CREATED",
+           "children": [
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "AttachNode",
+         "label": "AttachNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveToolCenterPointMotion",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "MotionNode",
+     "label": "MoveJointsMotion",
+     "status": "CREATED",
+     "children": []
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "PlaceAction",
+     "status": "CREATED",
+     "target": "bolt_crate",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "SequentialNode",
+       "label": "SequentialNode",
+       "status": "CREATED",
+       "children": [
+        {
+         "kind": "ActionNode",
+         "label": "ReachAction",
+         "status": "CREATED",
+         "target": "bolt_crate",
+         "children": [
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "SequentialNode",
+           "label": "SequentialNode",
+           "status": "CREATED",
+           "children": [
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "DetachNode",
+         "label": "DetachNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveToolCenterPointMotion",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "MotionNode",
+     "label": "MoveJointsMotion",
+     "status": "CREATED",
+     "children": []
+    }
+   ]
+  },
+  {
+   "kind": "SequentialNode",
+   "label": "SequentialNode",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "PickUpAction",
+     "status": "CREATED",
+     "target": "pitch_motor",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "SequentialNode",
+       "label": "SequentialNode",
+       "status": "CREATED",
+       "children": [
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "ActionNode",
+         "label": "ReachAction",
+         "status": "CREATED",
+         "target": "pitch_motor",
+         "children": [
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "SequentialNode",
+           "label": "SequentialNode",
+           "status": "CREATED",
+           "children": [
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "AttachNode",
+         "label": "AttachNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveToolCenterPointMotion",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "MotionNode",
+     "label": "MoveJointsMotion",
+     "status": "CREATED",
+     "children": []
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "PlaceAction",
+     "status": "CREATED",
+     "target": "pitch_motor",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "SequentialNode",
+       "label": "SequentialNode",
+       "status": "CREATED",
+       "children": [
+        {
+         "kind": "ActionNode",
+         "label": "ReachAction",
+         "status": "CREATED",
+         "target": "pitch_motor",
+         "children": [
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "SequentialNode",
+           "label": "SequentialNode",
+           "status": "CREATED",
+           "children": [
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "DetachNode",
+         "label": "DetachNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveToolCenterPointMotion",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "MotionNode",
+     "label": "MoveJointsMotion",
+     "status": "CREATED",
+     "children": []
+    }
+   ]
+  },
+  {
+   "kind": "SequentialNode",
+   "label": "SequentialNode",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "PickUpAction",
+     "status": "CREATED",
+     "target": "sensor_unit",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "SequentialNode",
+       "label": "SequentialNode",
+       "status": "CREATED",
+       "children": [
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "ActionNode",
+         "label": "ReachAction",
+         "status": "CREATED",
+         "target": "sensor_unit",
+         "children": [
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "SequentialNode",
+           "label": "SequentialNode",
+           "status": "CREATED",
+           "children": [
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "AttachNode",
+         "label": "AttachNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveToolCenterPointMotion",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "MotionNode",
+     "label": "MoveJointsMotion",
+     "status": "CREATED",
+     "children": []
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "NavigateAction",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "PlaceAction",
+     "status": "CREATED",
+     "target": "sensor_unit",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "SequentialNode",
+       "label": "SequentialNode",
+       "status": "CREATED",
+       "children": [
+        {
+         "kind": "ActionNode",
+         "label": "ReachAction",
+         "status": "CREATED",
+         "target": "sensor_unit",
+         "children": [
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "SequentialNode",
+           "label": "SequentialNode",
+           "status": "CREATED",
+           "children": [
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "MotionNode",
+             "label": "MoveToolCenterPointMotion",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "ConditionNode",
+           "label": "ConditionNode",
+           "status": "CREATED",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveGripperMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "DetachNode",
+         "label": "DetachNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveToolCenterPointMotion",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ParkArmsAction",
+     "status": "CREATED",
+     "arm": "BOTH",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "ConditionNode",
+       "status": "CREATED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "MotionNode",
+     "label": "MoveJointsMotion",
+     "status": "CREATED",
+     "children": []
+    }
+   ]
+  }
+ ],
+ "placeTarget": {
+  "pos": [
+   2.6,
+   7.88
+  ],
+  "z": 0.778,
+  "bounds": {
+   "minX": 2.05,
+   "maxX": 3.15,
+   "minY": 7.33,
+   "maxY": 8.53
+  }
+ },
+ "dragBounds": {
+  "minX": 2.4,
+  "maxX": 3.1,
+  "minY": 8.35,
+  "maxY": 9.9
+ },
+ "missingAssets": []
+}

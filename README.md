@@ -40,3 +40,7 @@ scenes work without it — it only provides ready-made demo recordings.
 | `pr2_kitchen`     | PR2 transporting milk/bowl/spoon (IAI apartment) |
 | `garmi_apartment` | Garmi in the apartment                      |
 | `garmi_mobile_lab` | Garmi transporting a bowl from the counter to the table (IAI KIT mobile lab, R007) |
+| `Unitree_wind_turbine_assembly` | Unitree G1 delivering components (bolt crate, pitch motor, sensor unit) to a wind-turbine assembly team in the AWS small warehouse |
+| `Unitree_wind_turbine_hall` | Unitree G1 supplying the technician at the rotor hub in a wind-turbine nacelle assembly hall |
+| `Unitree_storage_warehouse` | Unitree G1 clearing an incoming pallet into a rack shelf in a storage warehouse |
+| `Unitree_wind_farm_service` | Unitree G1 parking a 300 m turbine and laying out its service parts, in a 25-machine wind farm |

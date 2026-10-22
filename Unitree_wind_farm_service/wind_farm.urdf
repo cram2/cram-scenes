@@ -1,0 +1,3579 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="wind_farm">
+  <link name="world" />
+  <link name="Farm_Big_tall_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="100.0 100.0 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 150.1" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="8.55542" length="150.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_Big_tall_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_Big_tall_base" />
+    <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_Big_tall_nacelle">
+    <visual>
+      <origin xyz="-7.12161 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="28.4864 17.11084 12.87586" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_Big_tall_yaw" type="continuous">
+    <parent link="Farm_Big_tall_base" />
+    <child link="Farm_Big_tall_nacelle" />
+    <origin xyz="0.0 0.0 306.538" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_Big_tall_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="9.0" length="6.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="12.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmp55s1p1ar/tmp55s1p1ar.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_Big_tall_rotor" type="continuous">
+    <parent link="Farm_Big_tall_nacelle" />
+    <child link="Farm_Big_tall_hub" />
+    <origin xyz="15.677 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_Big_tall_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 86.9121" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="2.4 10.8 160.9482" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 162.558" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="2.4 10.8 9.6569" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_Big_tall_hub_T_Farm_Big_tall_blade3" type="fixed">
+    <parent link="Farm_Big_tall_hub" />
+    <child link="Farm_Big_tall_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_Big_tall_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 86.9121" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="2.4 10.8 160.9482" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 162.558" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="2.4 10.8 9.6569" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_Big_tall_hub_T_Farm_Big_tall_blade2" type="fixed">
+    <parent link="Farm_Big_tall_hub" />
+    <child link="Farm_Big_tall_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_Big_tall_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 86.9121" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="2.4 10.8 160.9482" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 162.558" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="2.4 10.8 9.6569" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_Big_tall_hub_T_Farm_Big_tall_blade1" type="fixed">
+    <parent link="Farm_Big_tall_hub" />
+    <child link="Farm_Big_tall_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_6_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_South_6_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_South_6_base" />
+    <origin xyz="250.0 -350.0 0.1" rpy="0.0 0.0 -1.570796" />
+  </joint>
+  <link name="Farm_South_6_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_6_yaw" type="continuous">
+    <parent link="Farm_South_6_base" />
+    <child link="Farm_South_6_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_South_6_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpgbjz_jbg/tmpgbjz_jbg.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_6_rotor" type="continuous">
+    <parent link="Farm_South_6_nacelle" />
+    <child link="Farm_South_6_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_South_6_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_6_hub_T_Farm_South_6_blade3" type="fixed">
+    <parent link="Farm_South_6_hub" />
+    <child link="Farm_South_6_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_6_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_6_hub_T_Farm_South_6_blade2" type="fixed">
+    <parent link="Farm_South_6_hub" />
+    <child link="Farm_South_6_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_6_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_6_hub_T_Farm_South_6_blade1" type="fixed">
+    <parent link="Farm_South_6_hub" />
+    <child link="Farm_South_6_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_5_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_South_5_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_South_5_base" />
+    <origin xyz="200.0 -300.0 0.1" rpy="0.0 0.0 -1.570796" />
+  </joint>
+  <link name="Farm_South_5_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_5_yaw" type="continuous">
+    <parent link="Farm_South_5_base" />
+    <child link="Farm_South_5_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_South_5_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpi6rkn2dn/tmpi6rkn2dn.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_5_rotor" type="continuous">
+    <parent link="Farm_South_5_nacelle" />
+    <child link="Farm_South_5_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_South_5_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_5_hub_T_Farm_South_5_blade3" type="fixed">
+    <parent link="Farm_South_5_hub" />
+    <child link="Farm_South_5_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_5_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_5_hub_T_Farm_South_5_blade2" type="fixed">
+    <parent link="Farm_South_5_hub" />
+    <child link="Farm_South_5_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_5_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_5_hub_T_Farm_South_5_blade1" type="fixed">
+    <parent link="Farm_South_5_hub" />
+    <child link="Farm_South_5_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_4_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_South_4_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_South_4_base" />
+    <origin xyz="150.0 -250.0 0.1" rpy="0.0 0.0 -1.570796" />
+  </joint>
+  <link name="Farm_South_4_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_4_yaw" type="continuous">
+    <parent link="Farm_South_4_base" />
+    <child link="Farm_South_4_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_South_4_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpm5e4iw_u/tmpm5e4iw_u.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_4_rotor" type="continuous">
+    <parent link="Farm_South_4_nacelle" />
+    <child link="Farm_South_4_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_South_4_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_4_hub_T_Farm_South_4_blade3" type="fixed">
+    <parent link="Farm_South_4_hub" />
+    <child link="Farm_South_4_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_4_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_4_hub_T_Farm_South_4_blade2" type="fixed">
+    <parent link="Farm_South_4_hub" />
+    <child link="Farm_South_4_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_4_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_4_hub_T_Farm_South_4_blade1" type="fixed">
+    <parent link="Farm_South_4_hub" />
+    <child link="Farm_South_4_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_3_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_South_3_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_South_3_base" />
+    <origin xyz="100.0 -200.0 0.1" rpy="0.0 0.0 -1.570796" />
+  </joint>
+  <link name="Farm_South_3_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_3_yaw" type="continuous">
+    <parent link="Farm_South_3_base" />
+    <child link="Farm_South_3_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_South_3_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmptbhxc6ff/tmptbhxc6ff.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_3_rotor" type="continuous">
+    <parent link="Farm_South_3_nacelle" />
+    <child link="Farm_South_3_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_South_3_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_3_hub_T_Farm_South_3_blade3" type="fixed">
+    <parent link="Farm_South_3_hub" />
+    <child link="Farm_South_3_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_3_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_3_hub_T_Farm_South_3_blade2" type="fixed">
+    <parent link="Farm_South_3_hub" />
+    <child link="Farm_South_3_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_3_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_3_hub_T_Farm_South_3_blade1" type="fixed">
+    <parent link="Farm_South_3_hub" />
+    <child link="Farm_South_3_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_2_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_South_2_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_South_2_base" />
+    <origin xyz="50.0 -150.0 0.1" rpy="0.0 0.0 -1.570796" />
+  </joint>
+  <link name="Farm_South_2_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_2_yaw" type="continuous">
+    <parent link="Farm_South_2_base" />
+    <child link="Farm_South_2_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_South_2_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpgw4uc7br/tmpgw4uc7br.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_2_rotor" type="continuous">
+    <parent link="Farm_South_2_nacelle" />
+    <child link="Farm_South_2_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_South_2_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_2_hub_T_Farm_South_2_blade3" type="fixed">
+    <parent link="Farm_South_2_hub" />
+    <child link="Farm_South_2_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_2_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_2_hub_T_Farm_South_2_blade2" type="fixed">
+    <parent link="Farm_South_2_hub" />
+    <child link="Farm_South_2_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_2_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_2_hub_T_Farm_South_2_blade1" type="fixed">
+    <parent link="Farm_South_2_hub" />
+    <child link="Farm_South_2_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_1_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_South_1_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_South_1_base" />
+    <origin xyz="0.0 -100.0 0.1" rpy="0.0 0.0 -1.570796" />
+  </joint>
+  <link name="Farm_South_1_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_1_yaw" type="continuous">
+    <parent link="Farm_South_1_base" />
+    <child link="Farm_South_1_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_South_1_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpnkth5vqp/tmpnkth5vqp.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_1_rotor" type="continuous">
+    <parent link="Farm_South_1_nacelle" />
+    <child link="Farm_South_1_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_South_1_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_1_hub_T_Farm_South_1_blade3" type="fixed">
+    <parent link="Farm_South_1_hub" />
+    <child link="Farm_South_1_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_1_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_1_hub_T_Farm_South_1_blade2" type="fixed">
+    <parent link="Farm_South_1_hub" />
+    <child link="Farm_South_1_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_South_1_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_South_1_hub_T_Farm_South_1_blade1" type="fixed">
+    <parent link="Farm_South_1_hub" />
+    <child link="Farm_South_1_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_6_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_West_6_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_West_6_base" />
+    <origin xyz="-350.0 -250.0 0.1" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="Farm_West_6_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_6_yaw" type="continuous">
+    <parent link="Farm_West_6_base" />
+    <child link="Farm_West_6_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_West_6_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpvsreu7_s/tmpvsreu7_s.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_6_rotor" type="continuous">
+    <parent link="Farm_West_6_nacelle" />
+    <child link="Farm_West_6_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_West_6_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_6_hub_T_Farm_West_6_blade3" type="fixed">
+    <parent link="Farm_West_6_hub" />
+    <child link="Farm_West_6_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_6_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_6_hub_T_Farm_West_6_blade2" type="fixed">
+    <parent link="Farm_West_6_hub" />
+    <child link="Farm_West_6_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_6_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_6_hub_T_Farm_West_6_blade1" type="fixed">
+    <parent link="Farm_West_6_hub" />
+    <child link="Farm_West_6_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_5_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_West_5_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_West_5_base" />
+    <origin xyz="-300.0 -200.0 0.1" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="Farm_West_5_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_5_yaw" type="continuous">
+    <parent link="Farm_West_5_base" />
+    <child link="Farm_West_5_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_West_5_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpqd25v3zl/tmpqd25v3zl.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_5_rotor" type="continuous">
+    <parent link="Farm_West_5_nacelle" />
+    <child link="Farm_West_5_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_West_5_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_5_hub_T_Farm_West_5_blade3" type="fixed">
+    <parent link="Farm_West_5_hub" />
+    <child link="Farm_West_5_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_5_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_5_hub_T_Farm_West_5_blade2" type="fixed">
+    <parent link="Farm_West_5_hub" />
+    <child link="Farm_West_5_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_5_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_5_hub_T_Farm_West_5_blade1" type="fixed">
+    <parent link="Farm_West_5_hub" />
+    <child link="Farm_West_5_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_4_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_West_4_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_West_4_base" />
+    <origin xyz="-250.0 -150.0 0.1" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="Farm_West_4_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_4_yaw" type="continuous">
+    <parent link="Farm_West_4_base" />
+    <child link="Farm_West_4_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_West_4_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpvf7ajgcr/tmpvf7ajgcr.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_4_rotor" type="continuous">
+    <parent link="Farm_West_4_nacelle" />
+    <child link="Farm_West_4_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_West_4_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_4_hub_T_Farm_West_4_blade3" type="fixed">
+    <parent link="Farm_West_4_hub" />
+    <child link="Farm_West_4_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_4_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_4_hub_T_Farm_West_4_blade2" type="fixed">
+    <parent link="Farm_West_4_hub" />
+    <child link="Farm_West_4_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_4_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_4_hub_T_Farm_West_4_blade1" type="fixed">
+    <parent link="Farm_West_4_hub" />
+    <child link="Farm_West_4_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_3_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_West_3_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_West_3_base" />
+    <origin xyz="-200.0 -100.0 0.1" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="Farm_West_3_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_3_yaw" type="continuous">
+    <parent link="Farm_West_3_base" />
+    <child link="Farm_West_3_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_West_3_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpx8qjy4dc/tmpx8qjy4dc.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_3_rotor" type="continuous">
+    <parent link="Farm_West_3_nacelle" />
+    <child link="Farm_West_3_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_West_3_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_3_hub_T_Farm_West_3_blade3" type="fixed">
+    <parent link="Farm_West_3_hub" />
+    <child link="Farm_West_3_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_3_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_3_hub_T_Farm_West_3_blade2" type="fixed">
+    <parent link="Farm_West_3_hub" />
+    <child link="Farm_West_3_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_3_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_3_hub_T_Farm_West_3_blade1" type="fixed">
+    <parent link="Farm_West_3_hub" />
+    <child link="Farm_West_3_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_2_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_West_2_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_West_2_base" />
+    <origin xyz="-150.0 -50.0 0.1" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="Farm_West_2_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_2_yaw" type="continuous">
+    <parent link="Farm_West_2_base" />
+    <child link="Farm_West_2_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_West_2_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpha4nuhmv/tmpha4nuhmv.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_2_rotor" type="continuous">
+    <parent link="Farm_West_2_nacelle" />
+    <child link="Farm_West_2_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_West_2_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_2_hub_T_Farm_West_2_blade3" type="fixed">
+    <parent link="Farm_West_2_hub" />
+    <child link="Farm_West_2_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_2_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_2_hub_T_Farm_West_2_blade2" type="fixed">
+    <parent link="Farm_West_2_hub" />
+    <child link="Farm_West_2_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_2_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_2_hub_T_Farm_West_2_blade1" type="fixed">
+    <parent link="Farm_West_2_hub" />
+    <child link="Farm_West_2_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_1_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_West_1_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_West_1_base" />
+    <origin xyz="-100.0 0.0 0.1" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="Farm_West_1_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_1_yaw" type="continuous">
+    <parent link="Farm_West_1_base" />
+    <child link="Farm_West_1_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_West_1_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpf4l79u5n/tmpf4l79u5n.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_1_rotor" type="continuous">
+    <parent link="Farm_West_1_nacelle" />
+    <child link="Farm_West_1_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_West_1_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_1_hub_T_Farm_West_1_blade3" type="fixed">
+    <parent link="Farm_West_1_hub" />
+    <child link="Farm_West_1_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_1_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_1_hub_T_Farm_West_1_blade2" type="fixed">
+    <parent link="Farm_West_1_hub" />
+    <child link="Farm_West_1_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_West_1_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_West_1_hub_T_Farm_West_1_blade1" type="fixed">
+    <parent link="Farm_West_1_hub" />
+    <child link="Farm_West_1_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_6_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_North_6_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_North_6_base" />
+    <origin xyz="-250.0 350.0 0.1" rpy="0.0 0.0 1.570796" />
+  </joint>
+  <link name="Farm_North_6_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_6_yaw" type="continuous">
+    <parent link="Farm_North_6_base" />
+    <child link="Farm_North_6_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_North_6_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpavv90sk2/tmpavv90sk2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_6_rotor" type="continuous">
+    <parent link="Farm_North_6_nacelle" />
+    <child link="Farm_North_6_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_North_6_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_6_hub_T_Farm_North_6_blade3" type="fixed">
+    <parent link="Farm_North_6_hub" />
+    <child link="Farm_North_6_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_6_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_6_hub_T_Farm_North_6_blade2" type="fixed">
+    <parent link="Farm_North_6_hub" />
+    <child link="Farm_North_6_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_6_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_6_hub_T_Farm_North_6_blade1" type="fixed">
+    <parent link="Farm_North_6_hub" />
+    <child link="Farm_North_6_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_5_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_North_5_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_North_5_base" />
+    <origin xyz="-200.0 300.0 0.1" rpy="0.0 0.0 1.570796" />
+  </joint>
+  <link name="Farm_North_5_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_5_yaw" type="continuous">
+    <parent link="Farm_North_5_base" />
+    <child link="Farm_North_5_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_North_5_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpsi2xc9l5/tmpsi2xc9l5.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_5_rotor" type="continuous">
+    <parent link="Farm_North_5_nacelle" />
+    <child link="Farm_North_5_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_North_5_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_5_hub_T_Farm_North_5_blade3" type="fixed">
+    <parent link="Farm_North_5_hub" />
+    <child link="Farm_North_5_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_5_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_5_hub_T_Farm_North_5_blade2" type="fixed">
+    <parent link="Farm_North_5_hub" />
+    <child link="Farm_North_5_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_5_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_5_hub_T_Farm_North_5_blade1" type="fixed">
+    <parent link="Farm_North_5_hub" />
+    <child link="Farm_North_5_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_4_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_North_4_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_North_4_base" />
+    <origin xyz="-150.0 250.0 0.1" rpy="0.0 0.0 1.570796" />
+  </joint>
+  <link name="Farm_North_4_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_4_yaw" type="continuous">
+    <parent link="Farm_North_4_base" />
+    <child link="Farm_North_4_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_North_4_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpfv4shanm/tmpfv4shanm.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_4_rotor" type="continuous">
+    <parent link="Farm_North_4_nacelle" />
+    <child link="Farm_North_4_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_North_4_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_4_hub_T_Farm_North_4_blade3" type="fixed">
+    <parent link="Farm_North_4_hub" />
+    <child link="Farm_North_4_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_4_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_4_hub_T_Farm_North_4_blade2" type="fixed">
+    <parent link="Farm_North_4_hub" />
+    <child link="Farm_North_4_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_4_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_4_hub_T_Farm_North_4_blade1" type="fixed">
+    <parent link="Farm_North_4_hub" />
+    <child link="Farm_North_4_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_3_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_North_3_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_North_3_base" />
+    <origin xyz="-100.0 200.0 0.1" rpy="0.0 0.0 1.570796" />
+  </joint>
+  <link name="Farm_North_3_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_3_yaw" type="continuous">
+    <parent link="Farm_North_3_base" />
+    <child link="Farm_North_3_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_North_3_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpapjxa1q7/tmpapjxa1q7.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_3_rotor" type="continuous">
+    <parent link="Farm_North_3_nacelle" />
+    <child link="Farm_North_3_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_North_3_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_3_hub_T_Farm_North_3_blade3" type="fixed">
+    <parent link="Farm_North_3_hub" />
+    <child link="Farm_North_3_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_3_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_3_hub_T_Farm_North_3_blade2" type="fixed">
+    <parent link="Farm_North_3_hub" />
+    <child link="Farm_North_3_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_3_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_3_hub_T_Farm_North_3_blade1" type="fixed">
+    <parent link="Farm_North_3_hub" />
+    <child link="Farm_North_3_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_2_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_North_2_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_North_2_base" />
+    <origin xyz="-50.0 150.0 0.1" rpy="0.0 0.0 1.570796" />
+  </joint>
+  <link name="Farm_North_2_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_2_yaw" type="continuous">
+    <parent link="Farm_North_2_base" />
+    <child link="Farm_North_2_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_North_2_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpgj9xnpdh/tmpgj9xnpdh.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_2_rotor" type="continuous">
+    <parent link="Farm_North_2_nacelle" />
+    <child link="Farm_North_2_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_North_2_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_2_hub_T_Farm_North_2_blade3" type="fixed">
+    <parent link="Farm_North_2_hub" />
+    <child link="Farm_North_2_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_2_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_2_hub_T_Farm_North_2_blade2" type="fixed">
+    <parent link="Farm_North_2_hub" />
+    <child link="Farm_North_2_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_2_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_2_hub_T_Farm_North_2_blade1" type="fixed">
+    <parent link="Farm_North_2_hub" />
+    <child link="Farm_North_2_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_1_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_North_1_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_North_1_base" />
+    <origin xyz="0.0 100.0 0.1" rpy="0.0 0.0 1.570796" />
+  </joint>
+  <link name="Farm_North_1_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_1_yaw" type="continuous">
+    <parent link="Farm_North_1_base" />
+    <child link="Farm_North_1_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_North_1_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpp_240dv2/tmpp_240dv2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_1_rotor" type="continuous">
+    <parent link="Farm_North_1_nacelle" />
+    <child link="Farm_North_1_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_North_1_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_1_hub_T_Farm_North_1_blade3" type="fixed">
+    <parent link="Farm_North_1_hub" />
+    <child link="Farm_North_1_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_1_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_1_hub_T_Farm_North_1_blade2" type="fixed">
+    <parent link="Farm_North_1_hub" />
+    <child link="Farm_North_1_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_North_1_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_North_1_hub_T_Farm_North_1_blade1" type="fixed">
+    <parent link="Farm_North_1_hub" />
+    <child link="Farm_North_1_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_6_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_East_6_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_East_6_base" />
+    <origin xyz="350.0 250.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_6_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_6_yaw" type="continuous">
+    <parent link="Farm_East_6_base" />
+    <child link="Farm_East_6_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_East_6_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmp5xv7a_3o/tmp5xv7a_3o.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_6_rotor" type="continuous">
+    <parent link="Farm_East_6_nacelle" />
+    <child link="Farm_East_6_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_6_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_6_hub_T_Farm_East_6_blade3" type="fixed">
+    <parent link="Farm_East_6_hub" />
+    <child link="Farm_East_6_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_6_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_6_hub_T_Farm_East_6_blade2" type="fixed">
+    <parent link="Farm_East_6_hub" />
+    <child link="Farm_East_6_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_6_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_6_hub_T_Farm_East_6_blade1" type="fixed">
+    <parent link="Farm_East_6_hub" />
+    <child link="Farm_East_6_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_5_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_East_5_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_East_5_base" />
+    <origin xyz="300.0 200.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_5_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_5_yaw" type="continuous">
+    <parent link="Farm_East_5_base" />
+    <child link="Farm_East_5_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_East_5_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpxe3m86l_/tmpxe3m86l_.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_5_rotor" type="continuous">
+    <parent link="Farm_East_5_nacelle" />
+    <child link="Farm_East_5_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_5_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_5_hub_T_Farm_East_5_blade3" type="fixed">
+    <parent link="Farm_East_5_hub" />
+    <child link="Farm_East_5_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_5_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_5_hub_T_Farm_East_5_blade2" type="fixed">
+    <parent link="Farm_East_5_hub" />
+    <child link="Farm_East_5_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_5_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_5_hub_T_Farm_East_5_blade1" type="fixed">
+    <parent link="Farm_East_5_hub" />
+    <child link="Farm_East_5_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_4_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_East_4_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_East_4_base" />
+    <origin xyz="250.0 150.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_4_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_4_yaw" type="continuous">
+    <parent link="Farm_East_4_base" />
+    <child link="Farm_East_4_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_East_4_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpibeohjn8/tmpibeohjn8.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_4_rotor" type="continuous">
+    <parent link="Farm_East_4_nacelle" />
+    <child link="Farm_East_4_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_4_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_4_hub_T_Farm_East_4_blade3" type="fixed">
+    <parent link="Farm_East_4_hub" />
+    <child link="Farm_East_4_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_4_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_4_hub_T_Farm_East_4_blade2" type="fixed">
+    <parent link="Farm_East_4_hub" />
+    <child link="Farm_East_4_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_4_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_4_hub_T_Farm_East_4_blade1" type="fixed">
+    <parent link="Farm_East_4_hub" />
+    <child link="Farm_East_4_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_3_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_East_3_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_East_3_base" />
+    <origin xyz="200.0 100.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_3_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_3_yaw" type="continuous">
+    <parent link="Farm_East_3_base" />
+    <child link="Farm_East_3_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_East_3_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpt5xbqyxs/tmpt5xbqyxs.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_3_rotor" type="continuous">
+    <parent link="Farm_East_3_nacelle" />
+    <child link="Farm_East_3_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_3_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_3_hub_T_Farm_East_3_blade3" type="fixed">
+    <parent link="Farm_East_3_hub" />
+    <child link="Farm_East_3_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_3_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_3_hub_T_Farm_East_3_blade2" type="fixed">
+    <parent link="Farm_East_3_hub" />
+    <child link="Farm_East_3_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_3_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_3_hub_T_Farm_East_3_blade1" type="fixed">
+    <parent link="Farm_East_3_hub" />
+    <child link="Farm_East_3_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_2_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_East_2_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_East_2_base" />
+    <origin xyz="150.0 50.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_2_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_2_yaw" type="continuous">
+    <parent link="Farm_East_2_base" />
+    <child link="Farm_East_2_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_East_2_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmp59x9l_hd/tmp59x9l_hd.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_2_rotor" type="continuous">
+    <parent link="Farm_East_2_nacelle" />
+    <child link="Farm_East_2_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_2_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_2_hub_T_Farm_East_2_blade3" type="fixed">
+    <parent link="Farm_East_2_hub" />
+    <child link="Farm_East_2_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_2_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_2_hub_T_Farm_East_2_blade2" type="fixed">
+    <parent link="Farm_East_2_hub" />
+    <child link="Farm_East_2_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_2_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_2_hub_T_Farm_East_2_blade1" type="fixed">
+    <parent link="Farm_East_2_hub" />
+    <child link="Farm_East_2_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_1_base">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="43.6666 43.6666 0.2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 65.6" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <cylinder radius="3.73587" length="65.5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_Farm_East_1_base" type="fixed">
+    <parent link="world" />
+    <child link="Farm_East_1_base" />
+    <origin xyz="100.0 0.0 0.1" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_1_nacelle">
+    <visual>
+      <origin xyz="-3.10977 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="12.43908 7.47174 5.62246" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_1_yaw" type="continuous">
+    <parent link="Farm_East_1_base" />
+    <child link="Farm_East_1_nacelle" />
+    <origin xyz="0.0 0.0 133.911" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+  </joint>
+  <link name="Farm_East_1_hub">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="-0.0 1.570796 0.0" />
+      <geometry>
+        <cylinder radius="3.93" length="2.62" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="5.24 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/tmpfzojnokr/tmpfzojnokr.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_1_rotor" type="continuous">
+    <parent link="Farm_East_1_nacelle" />
+    <child link="Farm_East_1_hub" />
+    <origin xyz="6.84564 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <axis xyz="1.0 0.0 0.0" />
+  </joint>
+  <link name="Farm_East_1_blade3">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_1_hub_T_Farm_East_1_blade3" type="fixed">
+    <parent link="Farm_East_1_hub" />
+    <child link="Farm_East_1_blade3" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_1_blade2">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_1_hub_T_Farm_East_1_blade2" type="fixed">
+    <parent link="Farm_East_1_hub" />
+    <child link="Farm_East_1_blade2" />
+    <origin xyz="0.0 0.0 0.0" rpy="2.094395 0.0 -0.314159" />
+  </joint>
+  <link name="Farm_East_1_blade1">
+    <visual>
+      <origin xyz="0.0 0.0 37.3737" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 69.125" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 69.8625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="1.048 4.716 4.1475" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="Farm_East_1_hub_T_Farm_East_1_blade1" type="fixed">
+    <parent link="Farm_East_1_hub" />
+    <child link="Farm_East_1_blade1" />
+    <origin xyz="0.0 0.0 0.0" rpy="-2.094395 0.0 -0.314159" />
+  </joint>
+</robot>

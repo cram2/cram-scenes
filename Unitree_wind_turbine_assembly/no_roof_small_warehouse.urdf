@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="no_roof_small_warehouse">
+  <link name="default" />
+  <link name="aws_robomaker_warehouse_PalletJackB_01_001/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_PalletJackB_01_001/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_PalletJackB_01_001/link" />
+    <origin xyz="-0.276098 -9.481944 0.023266" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_TrashCanC_01_002/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_TrashCanC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_TrashCanC_01_002/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_TrashCanC_01_002/link" />
+    <origin xyz="-1.592441 7.71542 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringD_01_005/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringD_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringD_01_005/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringD_01_005/link" />
+    <origin xyz="-1.634682 -7.811813 -0.319559" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringC_01_032/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringC_01_032/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringC_01_032/link" />
+    <origin xyz="-1.2196 9.407 -0.015663" rpy="0.0 0.0 1.563871" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringC_01_031/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringC_01_031/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringC_01_031/link" />
+    <origin xyz="-1.573677 2.301994 -0.015663" rpy="0.0 0.0 -3.133191" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringC_01_030/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringC_01_030/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringC_01_030/link" />
+    <origin xyz="3.236 6.137154 0.0" rpy="0.0 0.0 -3.133185" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringC_01_029/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringC_01_029/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringC_01_029/link" />
+    <origin xyz="5.384239 6.137154 0.0" rpy="0.0 0.0 -3.133185" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringC_01_028/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringC_01_028/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringC_01_028/link" />
+    <origin xyz="5.54171 3.816475 -0.015663" rpy="0.0 0.0 -1.583191" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringC_01_027/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringC_01_027/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringC_01_027/link" />
+    <origin xyz="3.324959 3.822449 -0.012064" rpy="0.0 0.0 1.563871" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringA_01_018/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringA_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringA_01_018/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringA_01_018/link" />
+    <origin xyz="-1.491287 5.222435 -0.017477" rpy="0.0 0.0 -1.583185" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringA_01_017/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringA_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringA_01_017/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringA_01_017/link" />
+    <origin xyz="3.408638 8.616844 -0.017477" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ClutteringA_01_016/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ClutteringA_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ClutteringA_01_016/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ClutteringA_01_016/link" />
+    <origin xyz="5.708138 8.616844 -0.017477" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_Bucket_01_022/body">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_Bucket_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_Bucket_01_022/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_Bucket_01_022/body" />
+    <origin xyz="0.433449 8.59 0.0" rpy="0.0 0.0 -1.563161" />
+  </joint>
+  <link name="aws_robomaker_warehouse_Bucket_01_021/body">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_Bucket_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_Bucket_01_021/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_Bucket_01_021/body" />
+    <origin xyz="-1.8321 -6.3752 0.0" rpy="0.0 0.0 -1.563161" />
+  </joint>
+  <link name="aws_robomaker_warehouse_Bucket_01_020/body">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_Bucket_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_Bucket_01_020/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_Bucket_01_020/body" />
+    <origin xyz="0.433449 9.631706 0.0" rpy="0.0 0.0 -1.563161" />
+  </joint>
+  <link name="aws_robomaker_warehouse_Lamp_01_005/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_Lamp_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_Lamp_01_005/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_Lamp_01_005/link" />
+    <origin xyz="0.0 0.0 -4.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_GroundB_01_001/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_GroundB_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_GroundB_01_001/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_GroundB_01_001/link" />
+    <origin xyz="0.0 0.0 -0.090092" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfD_01_003/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfD_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfD_01_003/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfD_01_003/link" />
+    <origin xyz="4.73156 -6.750542 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfD_01_002/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfD_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfD_01_002/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfD_01_002/link" />
+    <origin xyz="4.73156 -3.038551 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfD_01_001/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfD_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfD_01_001/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfD_01_001/link" />
+    <origin xyz="4.73156 -1.242668 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfE_01_003/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfE_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfE_01_003/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfE_01_003/link" />
+    <origin xyz="4.73156 -8.6651 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfE_01_002/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfE_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfE_01_002/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfE_01_002/link" />
+    <origin xyz="4.73156 -4.827049 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfE_01_001/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfE_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfE_01_001/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfE_01_001/link" />
+    <origin xyz="4.73156 0.57943 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_WallB_01_001/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_WallB_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_WallB_01_001/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_WallB_01_001/link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="aws_robomaker_warehouse_ShelfF_01_001/link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/gazebo/meshes/aws_robomaker_warehouse_ShelfF_01_visual.DAE" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="aws_robomaker_warehouse_ShelfF_01_001/root" type="fixed">
+    <parent link="default" />
+    <child link="aws_robomaker_warehouse_ShelfF_01_001/link" />
+    <origin xyz="-5.795143 -0.956635 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+</robot>
